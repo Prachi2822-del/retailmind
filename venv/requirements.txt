@@ -1,0 +1,7 @@
+pandas
+fastapi uvicorn
+anthropic
+google-cloud-bigquery
+dbt-bigquery
+streamlit
+pytest ruff
