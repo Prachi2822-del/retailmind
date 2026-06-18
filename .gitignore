@@ -1,0 +1,4 @@
+.env
+AWS keys.csv
+retailmind.db
+venv/
