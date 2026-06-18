@@ -1,4 +1,15 @@
+# Environment
 .env
+
+# Credentials
 AWS keys.csv
-retailmind.db
+
+# Database
+*.db
+
+# Virtual environment
 venv/
+.venv/
+
+# System files
+.DS_Store
