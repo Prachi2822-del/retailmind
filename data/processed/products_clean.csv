@@ -1,11 +1,11 @@
-product_id,name,category,cost_price,is_active
-P001,Whole Milk 2L,Dairy,1.2,True
-P002,White Bread 700g,Bakery,0.9,True
-P003,Free Range Eggs 12pk,Dairy,3.5,True
-P004,Chicken Breast 1kg,Meat,6.0,True
-P005,Extra Virgin Olive Oil,Pantry,4.2,True
-P006,Cheddar Cheese 500g,Dairy,4.8,True
-P007,Sourdough Loaf,Bakery,3.2,True
-P008,Salmon Fillet 400g,Seafood,9.5,True
-P009,Greek Yoghurt 1kg,Dairy,5.1,True
-P010,Pasta 500g,Pantry,1.6,True
+product_id,name,category,cost_price,sell_price,is_active
+P001,Whole Milk 2L,Dairy,1.2,1.89,True
+P002,White Bread 700g,Bakery,0.9,1.49,True
+P003,Free Range Eggs 12pk,Dairy,3.5,5.99,True
+P004,Chicken Breast 1kg,Meat,6.0,9.99,True
+P005,Extra Virgin Olive Oil,Pantry,4.2,6.99,True
+P006,Cheddar Cheese 500g,Dairy,4.8,7.49,True
+P007,Sourdough Loaf,Bakery,3.2,5.49,True
+P008,Salmon Fillet 400g,Seafood,9.5,14.99,True
+P009,Greek Yoghurt 1kg,Dairy,5.1,7.99,True
+P010,Pasta 500g,Pantry,1.6,2.79,True

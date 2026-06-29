@@ -6,16 +6,16 @@ from datetime import datetime, timedelta
 random.seed(42)
 
 PRODUCTS = [
-    ("P001", "Whole Milk 2L",        "Dairy",   1.20),
-    ("P002", "White Bread 700g",     "Bakery",  0.90),
-    ("P003", "Free Range Eggs 12pk", "Dairy",   3.50),
-    ("P004", "Chicken Breast 1kg",   "Meat",    6.00),
-    ("P005", "Extra Virgin Olive Oil","Pantry", 4.20),
-    ("P006", "Cheddar Cheese 500g",  "Dairy",   4.80),
-    ("P007", "Sourdough Loaf",       "Bakery",  3.20),
-    ("P008", "Salmon Fillet 400g",   "Seafood", 9.50),
-    ("P009", "Greek Yoghurt 1kg",    "Dairy",   5.10),
-    ("P010", "Pasta 500g",           "Pantry",  1.60),
+    ("P001", "Whole Milk 2L",         "Dairy",   1.20, 1.89), 
+    ("P002", "White Bread 700g",      "Bakery",  0.90, 1.49),
+    ("P003", "Free Range Eggs 12pk",  "Dairy",   3.50, 5.99),
+    ("P004", "Chicken Breast 1kg",    "Meat",    6.00, 9.99),
+    ("P005", "Extra Virgin Olive Oil","Pantry",  4.20, 6.99),
+    ("P006", "Cheddar Cheese 500g",   "Dairy",   4.80, 7.49),
+    ("P007", "Sourdough Loaf",        "Bakery",  3.20, 5.49),
+    ("P008", "Salmon Fillet 400g",    "Seafood", 9.50, 14.99),
+    ("P009", "Greek Yoghurt 1kg",     "Dairy",   5.10, 7.99),
+    ("P010", "Pasta 500g",            "Pantry",  1.60, 2.79),
 ]
 
 STORES = [
@@ -46,7 +46,7 @@ for _ in range(5000):
     qty      = random.randint(1, 20)
 
     # Inject ~2% null amounts  (validation must catch this)
-    amount = round(qty * product[3], 2) if random.random() > 0.02 else None
+    amount = round(qty * product[4], 2) if random.random() > 0.02 else None
     # Inject ~1% negative quantities  (validation must catch this)
     quantity = qty if random.random() > 0.01 else -qty
 
@@ -63,7 +63,7 @@ for _ in range(5000):
 # ── Reference tables ─────────────────────────────────────────────────
 product_rows = [
     {"product_id": p[0], "name": p[1],
-     "category": p[2], "cost_price": p[3], "is_active": True}
+     "category": p[2], "cost_price": p[3], "sell_price": p[4], "is_active": True}
     for p in PRODUCTS
 ]
 
