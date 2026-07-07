@@ -11,7 +11,7 @@ import sys
 import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
-from app.api.main import app
+from src.api.main import app
 
 client = TestClient(app)
 

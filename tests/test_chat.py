@@ -10,7 +10,7 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
 from unittest.mock import patch, MagicMock
-from app.ai.chat import fetch_relevant_data, build_prompt
+from src.ai.chat import fetch_relevant_data, build_prompt
 
 def test_fetch_includes_summary_always():
     """ Summary data is always fetched regardless of question."""
@@ -51,13 +51,13 @@ def test_build_prompt_contains_data():
 
 def test_rag_retrieves_company_context():
     """RAG always returns company context."""
-    from app.ai.rag import retrieve_context
+    from src.ai.rag import retrieve_context
     context = retrieve_context("anything")
     assert "RetailMind" in context
 
 
 def test_rag_retrieves_product_context():
     """RAG returns product context for product questions."""
-    from app.ai.rag import retrieve_context
+    from src.ai.rag import retrieve_context
     context = retrieve_context("tell me about dairy products")
     assert "Dairy" in context

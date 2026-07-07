@@ -9,7 +9,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
 from unittest import result
 from unittest.mock import patch
-from app.agent.tools import execute_tool, TOOL_DEFINATIONS
+from src.agent.tools import execute_tool, TOOL_DEFINATIONS
 
 def test_all_tools_have_required_fields():
     """ Every tool defination must have name, description, input_schema. """

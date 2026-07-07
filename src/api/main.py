@@ -6,7 +6,7 @@ Run with: uvicorn app.api.main:app --reload
 """
 
 from fastapi import FastAPI
-from app.api.routers import analytics, health
+from src.api.routers import analytics, health
 
 app = FastAPI(
     title="RetailMind API",

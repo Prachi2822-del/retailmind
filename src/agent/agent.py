@@ -14,7 +14,7 @@ The agent loop"
 import os 
 import anthropic # type: ignore
 from dotenv import load_dotenv # pyright: ignore[reportMissingImports]
-from app.agent.tools import TOOL_DEFINATIONS, execute_tool
+from src.agent.tools import TOOL_DEFINATIONS, execute_tool
 
 load_dotenv()
 

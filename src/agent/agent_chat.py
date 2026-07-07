@@ -9,7 +9,7 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 
-from app.agent.agent import run_agent
+from src.agent.agent import run_agent
 
 def is_business_question(question: str) -> bool:
     keywords =[
