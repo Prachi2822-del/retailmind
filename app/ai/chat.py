@@ -7,9 +7,9 @@ User question -> classify intent (which data is needed?) -> Fetch data from Fast
 """
 
 import os
-import httpx
-import anthropic
-from dotenv import load_dotenv
+import httpx # type: ignore
+import anthropic # type: ignore
+from dotenv import load_dotenv # pyright: ignore[reportMissingImports]
 
 load_dotenv()
 
