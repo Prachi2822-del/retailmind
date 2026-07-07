@@ -10,7 +10,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    steps: 
+    steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -25,7 +25,9 @@ jobs:
           pip install fastapi uvicorn httpx pytest
 
       - name: Generate test data
-        run: python data/generate_data.py
+        run: |
+          mkdir -p data/raw
+          python data/generate_data.py
 
       - name: Run ETL pipeline
         run: python ingestion/pipeline.py
@@ -34,7 +36,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ap-southeast-2
 
-      - name: Build star schema 
+      - name: Build star schema
         run: python app/warehouse/star_schema.py
 
       - name: Run validator tests
@@ -45,3 +47,5 @@ jobs:
 
       - name: Run agent tests
         run: python -m pytest tests/test_agent.py -v
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
